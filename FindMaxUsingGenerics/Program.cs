@@ -6,14 +6,14 @@ namespace FindMaxUsingGenerics
 	{
 		public static void Main(string[] args)
 		{
-			MaxGeneric<int> maxGenericInt = new MaxGeneric<int>();
-			maxGenericInt.findMax(20, 60, 40);
+			MaxGeneric<int> intValue = new MaxGeneric<int>(20, 60, 40);
+			intValue.testMaximum();
 
-			MaxGeneric<float> maxGenericFloat = new MaxGeneric<float>();
-			maxGenericFloat.findMax(10.10f, 11.10f, 12.12f);
+			MaxGeneric<float> floatValue = new MaxGeneric<float>(10.10f, 11.10f, 12.12f);
+			floatValue.testMaximum();
 
-			MaxGeneric<string> maxGenericStr = new MaxGeneric<string>();
-			maxGenericStr.findMax("Apple", "Jackfruit", "Orange");
+			MaxGeneric<string> strMax = new MaxGeneric<string>("Apple", "Jackfruit", "Orange");
+			strMax.testMaximum();
 
 			
 		}
