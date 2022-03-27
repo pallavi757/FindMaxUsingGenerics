@@ -30,5 +30,10 @@ namespace FindMaxUsingGenerics
                 var max = array_Max(array_Value);
                 return max;
             }
+        public void printMax()
+        {
+            var max = array_Max(array_Value);
+            Console.WriteLine("Maximum is:" + max);
         }
+    }
 }

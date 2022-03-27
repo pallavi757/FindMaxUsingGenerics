@@ -16,15 +16,18 @@ namespace FindMaxUsingGenerics
 			{
 				case 1:									
 					MaxGeneric<int> intValue = new MaxGeneric<int>(intArray);
-				    Console.WriteLine(intValue.testMaximum());						
+					intValue.printMax();
+				   // Console.WriteLine(intValue.testMaximum());						
 					break;				
 				case 2:
 					MaxGeneric<float> floatValue = new MaxGeneric<float>(floatArray);
-				    Console.WriteLine(floatValue.testMaximum());
+					floatValue.printMax();
+				   // Console.WriteLine(floatValue.testMaximum());
 					break;
 				case 3:
 					MaxGeneric<string> strValue = new MaxGeneric<string>(stringArray);
-					Console.WriteLine(strValue.testMaximum());
+					strValue.printMax();	
+					//Console.WriteLine(strValue.testMaximum());
 					break;				
 				default:
 					Console.WriteLine("Enter Choice Between 1 And 3");
