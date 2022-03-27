@@ -8,32 +8,31 @@ namespace FindMaxUsingGenerics
 {
     public class MaxGeneric<T> where T: IComparable
     {
-        
-            public T[] array_Value;
+          public T findMax(T value_1, T value_2, T value_3)
+            {
+                T max = value_1;
+                if (value_1.CompareTo(value_2) > 0 && value_1.CompareTo(value_3) > 0)
+                {
+                    max = value_1;
+                    Console.Write("Maximum: {0}\n", max);
+                }
+                else if (value_2.CompareTo(value_1) > 0 && value_2.CompareTo(value_3) > 0)
+                {
+                    max = value_2;
+                    Console.Write("Maximum: {0}\n", max);
+                }
+                else if (value_3.CompareTo(value_1) > 0 && value_3.CompareTo(value_2) > 0)
+                {
 
-            public MaxGeneric(T[] array_Value)
-            {
-                this.array_Value = array_Value;
-            }
-            public T[] Sort(T[] array_Value)
-            {
-                Array.Sort(array_Value);
-                return array_Value;
-            }
-            public T array_Max(T[] array_Value)
-            {
-                var sorted_Value = Sort(array_Value);
-                return sorted_Value[^1];
-            }
-            public T testMaximum()
-            {
-                var max = array_Max(array_Value);
+                    max = value_3;
+                    Console.Write("Maximum: {0}\n", max);
+                }
+                else
+                {
+                    Console.WriteLine("all are same");
+                }
                 return max;
             }
-        public void printMax()
-        {
-            var max = array_Max(array_Value);
-            Console.WriteLine("Maximum is:" + max);
         }
     }
-}
+
