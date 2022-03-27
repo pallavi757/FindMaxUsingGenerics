@@ -6,15 +6,30 @@ namespace FindMaxUsingGenerics
     {
         public static void Main(string[] args)
         {
-            MaxInt maxint = new MaxInt();
-            Console.WriteLine(maxint.NumberMax(20, 60, 40));
+            int[] intArray = { 20, 60, 40,77,777,60 };
+            float[] floatArray = { 10.10f, 11.10f, 12.12f,44.57f,123.56f,43.78f };
+            string[] stringArray = { "Apple","Jackfruit","Orange","Peach","Mango" };
+			Console.Write("Select Your Choice: ");			
+			int ch = int.Parse(Console.ReadLine());
 
-            MaxFloat maxfloat = new MaxFloat();
-            Console.WriteLine(maxfloat.NumberMax(10.10f,11.10f,12.12f));
-
-            MaxString maxstring = new MaxString();
-            Console.Write(maxstring.Maxstring("Apple","Jackfruit","Orange"));
-           
-      }
+			switch (ch)
+			{
+				case 1:									
+					MaxGeneric<int> intValue = new MaxGeneric<int>(intArray);
+				    Console.WriteLine(intValue.testMaximum());						
+					break;				
+				case 2:
+					MaxGeneric<float> floatValue = new MaxGeneric<float>(floatArray);
+				    Console.WriteLine(floatValue.testMaximum());
+					break;
+				case 3:
+					MaxGeneric<string> strValue = new MaxGeneric<string>(stringArray);
+					Console.WriteLine(strValue.testMaximum());
+					break;				
+				default:
+					Console.WriteLine("Enter Choice Between 1 And 3");
+					break;
+			}
+		}
     }
 }
