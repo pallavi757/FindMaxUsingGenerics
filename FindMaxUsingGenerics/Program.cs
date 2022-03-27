@@ -11,6 +11,10 @@ namespace FindMaxUsingGenerics
 
             MaxFloat maxfloat = new MaxFloat();
             Console.WriteLine(maxfloat.NumberMax(10.10f,11.10f,12.12f));
+
+            MaxString maxstring = new MaxString();
+            Console.Write(maxstring.Maxstring("Apple","Jackfruit","Orange"));
+           
       }
     }
 }
